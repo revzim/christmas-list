@@ -23,14 +23,22 @@ presents = []
 
 file_name = create_christmas_list()
 
-choice = raw_input("What would you like to do with your christmas list\nWould you like to:\n1)Read List\n2)Add Present\n3)Delete Present\n4)Delete List\nPlease enter the number corresponding to the options: ")
-if choice == 2:
+c = int(raw_input("What would you like to do with your christmas list\nWould you like to:\n1)Read List\n2)Add Present\n3)Delete List\nPlease enter the number corresponding to the options: "))
+if c == 1:
 	f = open(file_name, "r")
 	f.read()
 	f.close()
-elif choice == 2:
+elif c == 2:
 	pres = p.add_present()
-
+elif c == 3:
+	ans = raw_input("Are you sure you want to delete your Christmas list? y/n?")
+	if ans is "y" or ans.lower() is "yes":
+		os.remove(os.path.realpath(file_name))
+		print "Your Christmas List has been deleted."
+	else:
+		print "Good Choice! Try to get as many options on the list as possible."
+else:
+	print "Please enter another option"
 class Present:
 
 	def __init__(self, name, price, url):
@@ -41,9 +49,10 @@ class Present:
 	def add_present(self):
 		f = os.path.realpath(file_name)
 		fl = open(f, "a")
-		fl.writelines(self.details() + '\n')
+		fl.write(self.details() + '\n')
 		fl.close()
-		return "Your present has been added to the list."
+		print "Your present has been added to the list."
+
 
 	def details(self):
 		return "Name: {0}\nPrice: ${1}\nUrl/Location: {2}".format(self.name, self.price, self.url)
@@ -57,6 +66,6 @@ def create_present():
 		return temp_present
 
 
-p = create_present()
-p.add_present()
-#print p.details()
+# p = create_present()
+# p.add_present()
+# #print p.details()
