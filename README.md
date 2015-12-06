@@ -3,6 +3,13 @@ Christmas List
 ##Description
 Simple Program that uses python to easily create present objects and write them to a file to store.
 
+##How To Run
+In terminal:
+> 1. Please type 'git clone https://github.com/revzim/christmas-list/' w. out the ''.
+> 2. Change into that new directory 'cd christmas-list'
+> 3. Type 'python christmas-list.py' into the terminal w. out the ''.
+> 4. (Optional) If you have jython installed type 'jython christmas-list.py' w. out the ''.
+
 ##Options
 There are 3 options as of now to choose from:
 >Read List
