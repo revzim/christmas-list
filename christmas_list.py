@@ -1,7 +1,7 @@
 import sys, os
 from Tkinter import *  
 
-root = Tk()   
+#root = Tk()   
 
 def get_name():
 	name = raw_input("Please enter your name: ").lower()
