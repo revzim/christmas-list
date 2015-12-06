@@ -30,7 +30,7 @@ c = raw_input("\nWhat would you like to do with your christmas list?\n\nWould yo
 c = int(c)
 if c == 1:
 	f = open(file_name, "r")
-	f.read()
+	print f.read()
 	f.close()
 elif c == 2:
 	pres = p.add_present()
